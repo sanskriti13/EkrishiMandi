@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+{% endblock head %}
+{% block content %}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 back">
+      <h2>eKrishiMandi.com</h2>
+    </div>
+  </div>
+  <br><br>
+  <div class="about-main">
+      <div class="row">
+         <div class="col-lg-6">
+            <h2>Welcome to KrishiMandi</h2>
+            <p>National Agriculture Market (eNAM) is a pan-India electronic trading portal which networks the existing APMC mandis to create a unified national market for agricultural commodities.Small Farmers Agribusiness Consortium (SFAC) is the lead agency for implementing eNAM under the aegis of Ministry of Agriculture and Farmers’ Welfare, Government of India. </p>
+            <p>To promote uniformity in agriculture marketing by streamlining of procedures across the integrated markets, removing information asymmetry between buyers and sellers and promoting real time price discovery based on actual demand and supply.</p>
+            <p>Integration of APMCs across the country through a common online market platform to facilitate pan-India trade in agriculture commodities, providing better price discovery through transparent auction process based on quality of produce along with timely online payment.</p>
+            <p>Benefits from eKrishiMandi for a Seller/ Farmer are :- Transparency in Trade through better price discovery- Access to more markets & buyers- Real time information on prices and arrival in near by mandis- Quick payments - will be able to build a healthy financial profile</p>
+         </div>
+         <div class="col-lg-6">
+            <img class="img-fluid rounded" src="{% static 'images/welcome.jpg' %}" alt="" />
+         </div>
+      </div>
+      <!-- /.row -->
+  </div>
+  <div class="services-bar">
+      <h1 class="my-4">Our Services </h1>
+      <!-- Services Section -->
+      <div class="row">
+         <div class="col-lg-4 mb-4">
+            <div class="card h-100">
+               <h4 class="card-header">INTEGRATED MARKETS</h4>
+               <div class="card-img">
+                  <img class="img-fluid" src="{% static 'images/farmerr.jpeg' %}" alt="" style="height:350px;width:500px;"/>
+               </div>
+               <div class="card-body">
+                  <p class="card-text">This online mandi system has integrated the markets and multiplied the consumer base for the farmers who were once limited to regional mandis.</p>
+               </div>
+               {% comment %} <div class="card-footer">
+                  <a href="#" class="btn btn-success">Learn More</a>
+               </div> {% endcomment %}
+            </div>
+         </div>
+         <div class="col-lg-4 mb-4">
+            <div class="card h-100">
+               <h4 class="card-header">NATIONWIDE TRADE</h4>
+               <div class="card-img">
+                  <img class="img-fluid" src="{% static 'images/trader.jpeg' %}" alt="" style="height:350px;width:500px;" />
+               </div>
+               <div class="card-body">
+                  <p class="card-text">This system has facilitated a digital gateway for the traders to trade crops across the country and add to the nation’s revenue.</p>
+               </div>
+               {% comment %} <div class="card-footer">
+                  <a href="#" class="btn btn-success">Learn More</a>
+               </div> {% endcomment %}
+            </div>
+         </div>
+         <div class="col-lg-4 mb-4">
+            <div class="card h-100">
+               <h4 class="card-header">TRANSPORTATION</h4>
+               <div class="card-img">
+                  <img class="img-fluid" src="{% static 'images/transport.jpeg' %}" alt="" style="height:350px;width:500px;"/>
+               </div>
+               <div class="card-body">
+                  <p class="card-text">Our E-Mandi system integrates the transportation features so, the traders and farmers can easily trade on standard transportation rates.</p>
+               </div>
+               {% comment %} <div class="card-footer">
+                  <a href="#" class="btn btn-success">Learn More</a>
+               </div> {% endcomment %}
+            </div>
+         </div>
+      </div>
+      <!-- /.row -->
+  </div>
+
+</div>
+
+  <!-- Footer -->
+
+<footer class="bg-dark text-center text-white mx-0 px-0">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    ©️ 2020 Copyright:
+    <a class="text-white" href="{% url 'home' %}">eKrishiMandi</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+
+
+
+{% endblock content %}

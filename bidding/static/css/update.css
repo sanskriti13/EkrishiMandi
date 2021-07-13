@@ -1,0 +1,53 @@
+
+
+.home .carousel-item
+{
+    min-height: 85vh;
+    background-repeat: center;
+    background-size:cover;
+    position:relative;
+    z-index:1;
+}
+
+
+
+
+
+
+
+#img1
+{
+    background-image:url("https://images.pexels.com/photos/4846530/pexels-photo-4846530.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+
+}
+
+#img2
+{
+    background-image:url("https://images.pexels.com/photos/4022132/pexels-photo-4022132.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+
+#img3
+{
+    background-image:url("https://images.pexels.com/photos/5529540/pexels-photo-5529540.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+
+
+body{
+    margin:0;
+    padding:0;
+
+
+    text-align: center;
+}
+
+h3{
+    color:whitesmoke;
+}
+
+.carousel-control-prev,.carousel-control-next
+{
+    border-color: darkgrey;
+}
+
+
+/*Changes made after this*/

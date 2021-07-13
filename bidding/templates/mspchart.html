@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+  <h2 class="text-center alert alert-primary">MSP CHART</h2>
+  <br>
+  <div class="row">
+    <div class="col-sm-6 offset-sm-3">
+      <table class="table table-hover  text-center">
+        <tr>
+          <th>IMAGE</th>
+          <th>CROP</th>
+          <th>PAST MSP</th>
+          <th>CURRENT MSP</th>
+        </tr>
+        {% for c in crop  %}
+        <tr>
+          <td><img src="{% static c.cimage %}" alt="img" style="height:100px; width:150px;"></td>
+          <td>{{c.cname}}</td>
+          <td>{{c.msp_current}}</td>
+          <td>{{c.msp_past}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

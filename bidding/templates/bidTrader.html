@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+      {% if 'user' %}
+
+      <a href="{% url 'logout' %}" class="btn btn-success mx-2">LOGOUT</a>
+      {% else %}
+    </div>
+    <a href="{% url 'login' %}" class="btn btn-success mx-2">LOGIN</a><a href="{% url 'register' %}" class="btn btn-secondary">REGISTER</a>
+  </div>
+  {% endif %}
+<div class="container-fluid">
+  <h3 class="text-center alert alert-warning">BIDDING</h3>
+  <div class="row">
+      <div class="col">
+          <table class="table table-success table-striped center">
+              <thead>
+                <tr>
+                  <th scope="col">IMAGE</th>
+                  <th scope="col">COMMODITY</th>
+                  <th scope="col">SELLER</th>
+                  <th scope="col">ENTRY</th>
+                  <th scope="col">DISTANCE</th>
+                  <th scope="col">ACTION</th>
+                </tr>
+              </thead>
+              <tbody>
+                  {% if farmer %}
+                  {% for f in farmer %}
+                <tr>
+                  <td><img src="{% static f.crop__cimage %}" style="width:120px;height:100px;"></td>
+                  <td>{{f.crop__cname}}</td>
+                  <td>{{f.farmer__name}}</td>
+                  <td>{{f.farmer__entrytime}}</td>
+                  <td>{{f.dist}}</td>
+                
+                  <td>
+                    <a href="{% url 'update' f.id %}" class="btn btn-dark">BID</a>
+                  </td>
+                </tr>
+                  {% endfor %}
+                  {% endif %}
+
+              </tbody>
+            </table>
+      </div>
+  </div>
+</div>
+
+  {% endblock %}
